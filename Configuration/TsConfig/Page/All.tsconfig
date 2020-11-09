@@ -1,0 +1,16 @@
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:orcid/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        uporcid{
+            iconIdentifier = orcid-ext
+            title = Orcid Data
+            description = Get the Orcid data with Client ID
+            tt_content_defValues.CType = uporcidext
+        }
+    }
+    show := addToList(uporcid)
+}
+
+

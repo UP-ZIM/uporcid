@@ -1,0 +1,74 @@
+{namespace f=TYPO3\CMS\Fluid\ViewHelpers}
+{namespace o=UniPotsdam\Orcid\ViewHelpers}
+    <f:if condition="{data.header}">
+        <h1>{data.header}</h1>
+    </f:if>    
+    <script src="{f:uri.resource(path:'Js/swagger-js/browser/swagger-client.js', extensionName: 'orcid')}"></script>
+    <script src="{f:uri.resource(path:'Js/citeproc-js/xmle4x.js', extensionName: 'orcid')}" type='text/javascript'></script>
+    <script src="{f:uri.resource(path:'Js/citeproc-js/xmldom.js', extensionName: 'orcid')}" type='text/javascript'></script>
+    <script src="{f:uri.resource(path:'Js/citeproc-js/citeproc.js', extensionName: 'orcid')}" type='text/javascript'></script>
+    <script src="{f:uri.resource(path:'Js/orcid.js', extensionName: 'orcid')}" type='text/javascript'></script>
+   <script src="{f:uri.resource(path:'Js/styles.js', extensionName: 'orcid')}" type='text/javascript'></script>
+   
+   
+    
+    <f:for each='<o:orciddata uid="{data.contactorcid_id}" orcidstyle="{data.contactoricidbox_style}"/>' as="csl" >
+    <f:format.html>{csl.author}</f:format.html>
+    <script type="text/javascript">
+        if (typeof styl == 'undefined') {
+			let styl;
+			let frontStyl;
+			let orcidData;
+			let divID;
+		}
+		
+		styl = "{data.contactoricidbox_style}";
+		frontStyl = "{data.contactorcid_front_style}";
+		orcidData = '<f:format.htmlentitiesDecode>{csl.jsonData}</f:format.htmlentitiesDecode>';
+		divID = '#bib{data.uid}';
+		
+		//parse jsonData in variable
+        djson = JSON.parse(orcidData);
+
+		orcid.init(resolve(styl, djson, divID, frontStyl));
+		 
+		function resolve(cslstyl,d, cntID, frntStyl){
+			//console.log(styl);
+			CSLStyles.fetchStyleXML(styl, function(styleXML){
+				orcid.resolveCitations(updatePageCallback, styleXML, d, cntID, frntStyl, cslstyl);	
+			});
+			
+		}
+            
+            
+		//this is called for each citation - it's an array containing one text citation
+		//if it failed, the the fails parameter contains the work that failed (as a SimpleWork)
+		function updatePageCallback(citations, fails, year, vid, frntStyl){
+			console.log(vid);
+			for (c in citations){
+				if (frntStyl == '1') {
+					$("#"+year+"-container").append(citations[c]);
+				} else {
+					//console.log(divID);
+					$(vid).append(citations[c]);
+				}
+					
+			}
+			for (f in fails){
+				$("#bibfails").append(fails[f].title + " (" + fails[f].citeprocURL+")<br/>");		
+			}
+			citations='';
+		}
+        
+        </script>
+    </f:for>
+    <div id="loading-img"><img src="<f:uri.image src='EXT:orcid/Resources/Public/Icons/loading.gif'/>" width="100px"/></div>
+   <div class="orcid_data" id="orcid-works-data">
+        
+        
+        <div id="bib{data.uid}" class="csl-bib-body"></div>
+        <!--<h3>Failed to resolve:</h3>
+        <div id="bibfails"></div>-->
+    </div> 
+
+    

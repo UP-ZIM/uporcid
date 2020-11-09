@@ -1,0 +1,45 @@
+{
+    "name": "unipotsdam/orcid",
+    "type": "typo3-cms-extension",
+    "description": "Get the all data with typo3",
+    "homepage": "https://www.uni-potsdam.de",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "version": "1.0.0",
+    "require": {
+        "typo3/cms-core": "^9.5",
+        "typo3/cms-rte-ckeditor": "^9.5",
+        "typo3/cms-fluid-styled-content": "^9.5"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "Resources/Public/citation-style-language/locales",
+                "version":"1.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/citation-style-language/locales.git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "Resources/Public/citation-style-language/styles-distribution",
+                "version":"1.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/citation-style-language/styles-distribution.git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "UniPotsdam\\Orcid\\": "Classes/"
+        }
+    }
+}

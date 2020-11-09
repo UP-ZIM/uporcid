@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-07-29UTC20:01:580">
+        <header>
+            <authorName>Anuj Sharma</authorName>
+            <authorEmail>asharma@uni-postdam.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.normal">
+                <source>Normal</source>
+            </trans-unit>
+			<trans-unit id="textbox.orcidform.label">
+                <source>Textbox</source>
+            </trans-unit>
+			<trans-unit id="select.contacttyp.label">
+                <source>Contact box Type</source>
+            </trans-unit>
+			<trans-unit id="select.contacttyp1">
+                <source>Contact box über gesamte Breite</source>
+            </trans-unit>
+			<trans-unit id="select.contacttyp2">
+                <source>Contact box über halbe Breite</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle.label">
+                <source>Orcid Citation Style</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle1">
+                <source>ACM</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle2">
+                <source>ACS</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle3">
+                <source>APA</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle4">
+                <source>ABNT</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle5">
+                <source>Chicago</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle6">
+                <source>Harvard</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle7">
+                <source>IEEE</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle8">
+                <source>MLA</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle9">
+                <source>Turabian</source>
+            </trans-unit>
+			<trans-unit id="select.contactstyle10">
+                <source>Vancouver</source>
+            </trans-unit>
+			<trans-unit id="orcidtext.id">
+                <source>Orcid ID</source>
+            </trans-unit>
+			
+        </body>
+    </file>
+</xliff>

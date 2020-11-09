@@ -1,0 +1,5 @@
+#
+# Extension Configuration template
+#
+# cat=orcidbasic; type=string; label= Orcid Public API Url: Enter the LSF API Url to get all coursed data.
+inputApiurl =

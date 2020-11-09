@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-07-29UTC20:01:580">
+        <header>
+            <authorName>Anuj Sharma</authorName>
+            <authorEmail>asharma@uni-postdam.de</authorEmail>
+        </header>
+        <body>
+			<trans-unit id="extConf.buttons">
+				<source>Buttons: Controls the order of buttons. Be careful: Buttons disappear when using wrong key names here.</source>
+			</trans-unit>
+			<trans-unit id="extConf.orcid">
+				<source>orcid: All save buttons are visible. No dropdown anymore.</source>
+			</trans-unit>
+			<trans-unit id="extConf.showLabelSave">
+				<source>Show label of "save" button: Show the label of this button. Just the icon will be visible.</source>
+			</trans-unit>
+			<trans-unit id="extConf.showLabelSaveDokView">
+				<source>Show label of "save and preview" button: Show the label of this button. Just the icon will be visible.</source>
+			</trans-unit>
+			<trans-unit id="extConf.showLabelSaveDokNew">
+				<source>Show label of "save and new" button: Show the label of this button. Just the icon will be visible.</source>
+			</trans-unit>
+			<trans-unit id="extConf.showLabelSaveAndClose">
+				<source>Show label of "save and close" button: Show the label of this button. Just the icon will be visible.</source>
+			</trans-unit>
+			<trans-unit id="extConf.allowUserSettings">
+				<source>Allow custom user settings: The settings above are treated as defaults and users can override them in their user settings.</source>
+			</trans-unit>
+			<trans-unit id="userSettings.tabName">
+				<source>Save Buttons</source>
+			</trans-unit>
+			<trans-unit id="userSettings.default">
+				<source>As defined by system settings</source>
+			</trans-unit>
+			<trans-unit id="userSettings.enable">
+				<source>Enabled</source>
+			</trans-unit>
+			<trans-unit id="userSettings.disable">
+				<source>Disabled</source>
+			</trans-unit>
+			<trans-unit id="userSettings.orcid">
+				<source>Show all save buttons</source>
+			</trans-unit>
+			<trans-unit id="userSettings.showLabelSave">
+				<source>Show label of "save" button</source>
+			</trans-unit>
+			<trans-unit id="userSettings.showLabelSaveDokView">
+				<source>Show label of "save and preview" button</source>
+			</trans-unit>
+			<trans-unit id="userSettings.showLabelSaveDokNew">
+				<source>Show label of "save and new" button</source>
+			</trans-unit>
+			<trans-unit id="userSettings.showLabelSaveAndClose">
+				<source>Show label of "save and close" button</source>
+			</trans-unit>
+		</body>
+    </file>
+</xliff>

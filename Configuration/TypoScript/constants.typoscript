@@ -1,0 +1,35 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+
+
+##############################
+#### FLUID STYLED CONTENT ####
+##############################
+styles {
+    templates {
+        layoutRootPath = EXT:orcid/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:orcid/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:orcid/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+## cat=up_contents/003; type=boolean; label=Include shadowbox lib and init-function
+uporcidext.includeJs = 1
+
+
+
+
+##############
+### CONFIG ###
+##############
+config {
+    no_cache = 0
+    removeDefaultJS = 0
+    admPanel = 1
+    prefixLocalAnchors = all
+    headerComment = build by sitepackagebuilder.com
+    sendCacheHeaders = 1
+}

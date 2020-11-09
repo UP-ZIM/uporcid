@@ -1,0 +1,15 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+    }
+    tt_content{
+		colPos.types.uporcidext{
+			disabled = 1
+		}
+	}
+	tt_content.stdWrap.outerWrap = <div class="noprint">|</div>
+	
+}

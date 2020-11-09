@@ -1,0 +1,41 @@
+
+config.compressJs = 0
+config.concatenateJs = 0
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+
+    includeCSS {
+        orcidexttypo3_layout = EXT:orcid/Resources/Public/Css/layout.css
+    }
+    includeJSLibs {
+        orcid_jquery = https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js
+    }
+    includeJS {
+        
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        
+    }
+}
+lib.contentElement {
+   templateRootPaths {
+      200 = EXT:orcid/Resources/Private/Templates/ContentElements
+   }
+}
+
+tt_content {
+   uporcidext < lib.contentElement
+   uporcidext {
+        40 < lib.stdHeader
+        templateName = Orciddata.html
+   }
+}

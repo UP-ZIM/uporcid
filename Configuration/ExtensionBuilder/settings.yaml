@@ -1,0 +1,64 @@
+#
+# This file is part of the package UniPotsdam\Orcid.
+# copyright 2020 by University Potsdam
+#
+# See http://www.yaml.org/spec/1.2/spec.html
+#
+
+overwriteSettings:
+  Classes:
+    Controller: merge
+    Domain:
+      Model: merge
+      Repository: merge
+
+  Configuration:
+    TCA: merge
+    TypoScript: merge
+
+  Resources:
+    Private:
+      Language: merge
+      Templates: merge
+
+  ext_icon.gif: merge
+
+  ext_localconf.php: merge
+
+  ext_tables.php: merge
+
+  ext_tables.sql: merge
+
+## use static date attribute in xliff files ##
+#staticDateInXliffFiles: 2015-11-06T14:37:00Z
+
+## list of error codes for warnings that should be ignored ##
+#ignoreWarnings:
+  #503
+
+######### settings for classBuilder #############################
+#
+# here you may define default parent classes for your classes
+# these settings only apply for new generated classes
+# you may also just change the parent class in the generated class file.
+# It will be kept on next code generation, if the overwrite settings
+# are configured to merge it
+#
+#################################################################
+
+classBuilder:
+
+  Controller:
+    parentClass: \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+
+  Model:
+    AbstractEntity:
+      parentClass: \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+
+    AbstractValueObject:
+      parentClass: \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject
+
+  Repository:
+    parentClass: \TYPO3\CMS\Extbase\Persistence\Repository
+
+  setDefaultValuesForClassProperties: true
