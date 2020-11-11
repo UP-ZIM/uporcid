@@ -42,7 +42,7 @@ If you have add include Static template under Template option in typo3 backend. 
 ![](doc/backendpagelayout.jpg)
 
 **Frontend page layout**
-![](doc/orcidfrontend.jpg)
+![](doc/orcidfrontend.png)
 
 # Contact
 
